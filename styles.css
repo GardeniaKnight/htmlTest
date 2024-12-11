@@ -1,0 +1,77 @@
+/* 设置页面背景和字体 */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* 渐变背景 */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* 设置字体颜色为白色 */
+  }
+  
+  /* Header 样式 */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    border-bottom: 3px solid #feb47b; /* 添加底部边框 */
+  }
+  
+  /* Main 内容区域 */
+  main {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 内容区阴影 */
+    margin: 40px 10%; /* 上下边距 */
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* 鼠标悬停动画 */
+  }
+  
+  main:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+  }
+  
+  /* Footer 样式 */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* 底部阴影 */
+  }
+  
+  /* 链接样式 */
+  a {
+    color: #feb47b;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* 过渡效果 */
+  }
+  
+  a:hover {
+    color: #ff7e5f; /* 鼠标悬停时颜色变化 */
+    text-decoration: underline;
+  }
+  
+  /* 标题动画效果 */
+  h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px; /* 字母间距 */
+    animation: fadeIn 2s ease-out; /* 动画效果 */
+  }
+  
+  /* 动画：文本渐变效果 */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
