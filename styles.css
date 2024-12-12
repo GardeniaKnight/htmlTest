@@ -51,3 +51,38 @@ body, html {
     cursor: pointer;
     z-index: 2;
 }
+
+/* 设置导航栏的样式 */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+ 
+nav ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* 使用flexbox布局使标签水平排列 */
+}
+ 
+nav ul.navbar li {
+    margin: 0;
+}
+ 
+nav ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+ 
+nav ul.navbar li a:hover {
+    background-color: #ddd; /* 当鼠标悬停在标签上时改变背景颜色 */
+    color: black; /* 同时改变文本颜色 */
+}
+ 
+/* 设置内容区域的样式 */
+#content {
+    padding: 20px;
+}

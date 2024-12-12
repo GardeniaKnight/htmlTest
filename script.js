@@ -15,3 +15,4 @@ document.addEventListener('DOMContentLoaded', function() {
         isPlaying = !isPlaying; // Toggle the state
     });
 });
+
