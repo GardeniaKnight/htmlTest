@@ -1,113 +1,53 @@
-/* 设置页面背景和字体 */
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* 渐变背景 */
+body, html {
     margin: 0;
     padding: 0;
-    color: #fff; /* 设置字体颜色为白色 */
-}
-  
-/* Header 样式 */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
-    border-bottom: 3px solid #feb47b; /* 添加底部边框 */
-}
-
-/* 标签页导航栏样式 */
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.tab-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-}
-
-.tab-button:hover {
-    background-color: #feb47b;
-}
-
-/* 标签内容样式 */
-.tab-content {
-    text-align: center;
-}
-
-.tab-pane {
-    display: none; /* 默认隐藏所有标签内容 */
-}
-
-.tab-pane.active {
-    display: block; /* 只有添加 active 类的标签内容才显示 */
-}
-
-/* Main 内容区域 */
-main {
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-    border-radius: 10px; /* 圆角 */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 内容区阴影 */
-    margin: 40px 10%; /* 上下边距 */
-    text-align: center;
-    transition: transform 0.3s ease-in-out; /* 鼠标悬停动画 */
-}
-  
-main:hover {
-    transform: scale(1.05); /* 鼠标悬停时放大 */
-}
-
-/* Footer 样式 */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    font-size: 14px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* 底部阴影 */
+    height: 100%;
+    overflow: hidden;
 }
 
-/* 链接样式 */
-a {
-    color: #feb47b;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out; /* 过渡效果 */
-}
-  
-a:hover {
-    color: #ff7e5f; /* 鼠标悬停时颜色变化 */
-    text-decoration: underline;
-}
-
-/* 标题动画效果 */
-h1, h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px; /* 字母间距 */
-    animation: fadeIn 2s ease-out; /* 动画效果 */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: -1;
 }
 
-/* 动画：文本渐变效果 */
-@keyframes fadeIn {
+@keyframes gradientBG {
     0% {
-        opacity: 0;
-        transform: translateY(-20px);
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        background-position: 0% 50%;
     }
+}
+
+#videoPlayer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#playPauseButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2;
 }

@@ -1,58 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First HTML Page</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- 引入particles.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video with Cool Background</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- 粒子背景容器 -->
-  <div id="particles-js"></div>
-
-  <header>
-    <h1>Welcome to My First HTML Page</h1>
-  </header>
-
-  <!-- 标签页导航 -->
-  <div class="tabs">
-    <button class="tab-button" onclick="showTab('home')">Home</button>
-    <button class="tab-button" onclick="showTab('about')">About</button>
-    <button class="tab-button" onclick="showTab('contact')">Contact</button>
-  </div>
-
-  <!-- 标签内容 -->
-  <div class="tab-content">
-    <div id="home" class="tab-pane active">
-      <h2>Home</h2>
-      <p>This is the home page content.</p>
-    </div>
-    <div id="about" class="tab-pane">
-      <h2>About</h2>
-      <p>This page provides information about the website.</p>
-    </div>
-    <div id="contact" class="tab-pane">
-      <h2>Contact</h2>
-      <p>This page provides contact information.</p>
-      
-      <!-- 视频播放器 -->
-      <div class="video-container">
-        <video id="myVideo" width="600" controls>
-          <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <button id="pauseButton" onclick="toggleVideo()">Pause</button>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2024 My First Website</p>
-  </footer>
-
-  <!-- 引入外部的JS文件 -->
-  <script src="scripts.js"></script>
+    <div id="background"></div>
+    <video id="videoPlayer" muted loop playsinline>
+        <source src="项目演示视频.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button id="playPauseButton">Play</button>
+    <script src="script.js"></script>
 </body>
 </html>
