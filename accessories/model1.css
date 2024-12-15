@@ -1,0 +1,120 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f7;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container and header styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* Car selection section */
+.car-selection, .accessory-selection {
+  margin-bottom: 40px;
+}
+
+.car-selection h2, .accessory-selection h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Car items grid */
+.car-list, .accessory-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Car item styles */
+.car-item, .accessory-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.car-item:hover, .accessory-item:hover {
+  transform: scale(1.05);
+}
+
+.car-item img, .accessory-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #eee;
+}
+
+.car-item h3, .accessory-item h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.car-item p {
+  font-size: 1em;
+  color: #777;
+}
+
+/* Selected item styles */
+.car-item.selected, .accessory-item.selected {
+  border: 2px solid #007aff; /* Blue border */
+  box-shadow: 0 4px 8px rgba(0, 122, 255, 0.2); /* Blue shadow */
+  background-color: #e6f0ff; /* Light blue background */
+}
+
+/* Button styles */
+.purchase-button {
+  background-color: #007aff;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.purchase-button:hover {
+  background-color: #005bb5;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .car-item, .accessory-item {
+      width: 45%;
+  }
+
+  .car-list, .accessory-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .purchase-button {
+      width: 100%;
+  }
+}
