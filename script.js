@@ -1,18 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('videoPlayer');
-    const playPauseButton = document.getElementById('playPauseButton');
-    
-    let isPlaying = false; // Initial state of video
-    
-    playPauseButton.addEventListener('click', function() {
-        if (isPlaying) {
-            video.pause();
-            playPauseButton.textContent = 'Play';
-        } else {
-            video.play();
-            playPauseButton.textContent = 'Pause';
-        }
-        isPlaying = !isPlaying; // Toggle the state
-    });
-});
-
+// This script adds interactivity to the Learn More button
+document.getElementById("ctaButton").addEventListener("click", function() {
+    alert("Thank you for clicking! Explore more about the new iPhone.");
+  });
