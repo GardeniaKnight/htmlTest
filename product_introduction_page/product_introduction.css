@@ -16,15 +16,35 @@
     color: inherit;
   }
   
+/* Gradient Background Covering the Entire Page with Static Color Gradient */
+.gradient-bg {
+  position: fixed; /* 使用 fixed 来确保背景始终固定在页面 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 宽度覆盖整个页面 */
+  height: 100vh; /* 高度覆盖整个视口 */
+  background: linear-gradient(90deg,  /* 使用 90deg 实现从左右两侧的渐变 */
+    #1e3a5f 0%,    /* 深蓝色带一点灰色，左侧 */
+    #2c4b6d 15%,   /* 深蓝色带灰色，渐变过渡区开始 */
+    #7f2c89 45%,   /* 紫色渐变区域，渐变的中间 */
+    #7f2c89 55%,   /* 紫色渐变区域，渐变的中间 */
+    #2c4b6d 85%,   /* 深蓝色带灰色，渐变过渡区 */
+    #1e3a5f 100%   /* 深蓝色带一点灰色，右侧 */
+  );
+  background-size: 100% 100%; /* 保持背景为静态渐变 */
+  z-index: -1; /* 保证它在页面内容的下方 */
+}
+
+
   /* Header Section */
   .header {
-    background-color: #111;
-    padding: 20px 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; /* Higher value than the gradient-bg */
+    background-color: #111; /* Keep original header color */
+    padding: 20px 0;
   }
   
   .navbar {
@@ -124,6 +144,10 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
+
+  .model h2 {
+    font-size: 3em; /* Change to the desired size */
+  }
   
   .model img {
     max-width: 100%;
@@ -200,7 +224,7 @@
   
   /* Button Styles */
   .order-btn,
-  .test-drive-btn {
+  .more-detail-btn {
     background-color: #007bff;
     color: white;
     border: none;
@@ -212,7 +236,7 @@
   }
   
   .order-btn:hover,
-  .test-drive-btn:hover {
+  .more-detail-btn:hover {
     background-color: #0056b3;
   }
   
