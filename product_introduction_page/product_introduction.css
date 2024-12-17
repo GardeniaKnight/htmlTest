@@ -182,45 +182,61 @@
     background-color: #0056b3;
   }
   
-  /* Image Slider */
-  .image-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  
-  .image-slider {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .slider-btn {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    transform: translateY(-50%);
-    display: none;
-  }
-  
-  .slider-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .prev-btn {
-    left: 10px;
-  }
-  
-  .next-btn {
-    right: 10px;
-  }
-  
-  .image-container:hover .slider-btn {
-    display: block;
-  }
+/* Image Slider Container with Enhanced Shadow */
+.image-container {
+  position: relative;
+  width: 75vw; /* 宽度占屏幕的 75% */
+  height: 500px; /* 设置一个固定的高度，也可以根据需要调整 */
+  max-width: 100%; /* 最大宽度不超过100% */
+  overflow: hidden; /* 确保图片不会超出容器 */
+  margin: 0 auto; /* 居中显示 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 增强阴影效果，扩大范围 */
+  border-radius: 5px; /* 添加圆角效果 */
+}
+/* Image Slider */
+.image-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%; /* 图片容器宽度为100% */
+}
+
+/* Image Styling */
+.image-slider img {
+  width: 100%; /* 图片宽度填充容器 */
+  height: 100%; /* 图片高度填充容器 */
+  object-fit: cover; /* 使图片覆盖整个容器，并保持完整，不裁剪 */
+  border-radius: 5px; /* 添加圆角效果 */
+}
+
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.image-container:hover .slider-btn {
+  display: block;
+}
+
   
   /* Button Styles */
   .order-btn,
