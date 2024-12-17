@@ -123,3 +123,10 @@ document.querySelectorAll('.navbar-item').forEach(item => {
         }, 300);
     });
 });
+// Adding functionality to the "Contact Us" link
+document.getElementById('contactUs').addEventListener('click', function() {
+    alert('Contact Information:\n\n' +
+          'Email: contact@hermes.com\n' +
+          'Phone: +123-456-7890\n' +
+          'Address: 123 Hermes Street, Vehicle City, EV Land');
+  });

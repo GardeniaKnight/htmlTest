@@ -37,7 +37,6 @@ document.querySelectorAll('.navbar-item').forEach(item => {
     }, 300);  // Match the fade-out duration
   });
 });
-
 // Adding functionality to the "Contact Us" link
 document.getElementById('contactUs').addEventListener('click', function() {
   alert('Contact Information:\n\n' +

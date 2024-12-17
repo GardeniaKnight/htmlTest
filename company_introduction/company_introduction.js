@@ -1,29 +1,4 @@
-document.querySelectorAll('.image-container').forEach(container => {
-    const slider = container.querySelector('.image-slider');
-    const images = Array.from(slider.children);
-    const prevBtn = container.querySelector('.prev-btn');
-    const nextBtn = container.querySelector('.next-btn');
-    let currentIndex = 0;
-  
-    function showImage(index) {
-      if (index < 0) {
-        currentIndex = images.length - 1;
-      } else if (index >= images.length) {
-        currentIndex = 0;
-      } else {
-        currentIndex = index;
-      }
-      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-  
-    prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
-    nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
-  
-    // Set initial image display
-    showImage(currentIndex);
-  });
-
-  document.querySelectorAll('.navbar-item').forEach(item => {
+document.querySelectorAll('.navbar-item').forEach(item => {
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     document.body.appendChild(overlay); // Add overlay to the body
@@ -64,8 +39,8 @@ document.querySelectorAll('.image-container').forEach(container => {
   });
   // Adding functionality to the "Contact Us" link
 document.getElementById('contactUs').addEventListener('click', function() {
-  alert('Contact Information:\n\n' +
-        'Email: contact@hermes.com\n' +
-        'Phone: +123-456-7890\n' +
-        'Address: 123 Hermes Street, Vehicle City, EV Land');
-});
+    alert('Contact Information:\n\n' +
+          'Email: contact@hermes.com\n' +
+          'Phone: +123-456-7890\n' +
+          'Address: 123 Hermes Street, Vehicle City, EV Land');
+  });
